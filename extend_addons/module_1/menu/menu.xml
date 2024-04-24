@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="project.menu_projects" model="ir.ui.menu">
+        <field name="sequence" eval="2" />
+    </record>
+    <record id="project_task_menu" model="ir.ui.menu">
+        <field name="name">Dashboard</field>
+        <field name="sequence" eval="1" />
+        <field name="action" ref="project_task_dashboard_action" />
+        <field name="parent_id" ref="project.menu_main_pm" />
+    </record>
+
+</odoo>

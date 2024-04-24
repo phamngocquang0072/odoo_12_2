@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend_inherit_ila_pp_bonus" name="js PP Bonus" inherit_id="web.assets_backend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/ila_hr_payroll_pp_bonus/static/src/js/ila_pp_bonus.js"></script>
+        </xpath>
+    </template>
+
+    <!-- Tree view for "hr.pp.bonus" -->
+    <record id="view_hr_pp_bonus_tree" model="ir.ui.view">
+        <field name="name">view.hr.pp.bonus.tree</field>
+        <field name="model">hr.pp.bonus</field>
+        <field name="type">tree</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <tree string="PP Bonus" create="false" delete="false" edit="false">
+                <field name="employee_id" />
+                <field name="employee_type" />
+                <field name="department_name" />
+                <field name="position_title_en" />
+                <field name="effective_from" />
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Search view for "hr.pp.bonus" -->
+    <record id="view_hr_pp_bonus_search" model="ir.ui.view">
+        <field name="name">view.hr.pp.bonus.search</field>
+        <field name="model">hr.pp.bonus</field>
+        <field name="type">search</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <search string="Search PP Bonus">
+                <field name="employee_id" />
+                <field name="employee_type" />
+                <group expand="0" string="Group By" colspan="4" col="4">
+                    <filter string="Year" name="group_by_year" domain="[]" context="{'group_by':'year'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Main window action for "hr.pp.bonus" -->
+    <record id="action_hr_pp_bonus_act_window" model="ir.actions.act_window">
+        <field name="type">ir.actions.act_window</field>
+        <field name="name">All PP Letters</field>
+        <field name="res_model">hr.pp.bonus</field>
+        <field name="view_mode">tree</field>
+        <field name="target">current</field>
+        <field name="domain">[]</field>
+        <field name="context">{
+            'search_default_group_by_year': 1,
+        }</field>
+        <field name="search_view_id" ref="view_hr_pp_bonus_search" />
+    </record>
+
+    <!-- Main window action for "hr.pp.bonus" -->
+    <record id="action_hr_pp_bonus_client" model="ir.actions.client">
+        <field name="type">ir.actions.client</field>
+        <field name="name">PP Bonuses</field>
+        <field name="target">current</field>
+        <field name="tag">pp_bonus</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend_inherit_project_task" name="js Project Task" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/module_1/static/src/js/project_task.js"></script>
+            <link rel="stylesheet" type="text/css" href="module_1/static/src/css/project_task.css"/>
+        </xpath>
+    </template>
+
+    <!-- Main action for "project_task" -->
+    <record id="project_task_dashboard_action" model="ir.actions.client">
+       <field name="name">Dashboard</field>
+       <field name="tag">custom_dashboard_tags</field>
+    </record>
+
+</odoo>

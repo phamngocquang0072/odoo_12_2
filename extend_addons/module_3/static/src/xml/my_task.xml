@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-name="ila_hr_payroll_pp_bonus.PP_Letter">
+		<section class="p-5 border rounded ila-box-shadow">
+			<div class="text-center p-5">
+				<img t-att-src="company_id[1] == 'ILAV' ? 'ila_hr_payroll_pp_bonus/static/src/img/logo_ila_No_A_W_Trans.png' : 'ila_hr_payroll_pp_bonus/static/src/img/logo_ilo_No_A_W_Trans.png'" class="img-fluid" style="width: 100px;" />
+			</div>
+			<h3 class="text-right font-weight-normal font-italic pt-5">
+				Private &amp; Confidential - Addressee only
+			</h3>
+			<div class="mb-5 text-right">
+					Date:
+				<t t-esc="format_date(effective_from, 'DD/MM/YYYY')" />
+			</div>
+			<div class="d-flex">
+				<div class="w-title pr-2">Dear:</div>
+				<div class="font-weight-bold">
+					<t t-esc="with_dict(gender)" />.&#xA0;
+					<t t-esc="employee_full_name" />
+				</div>
+			</div>
+			<div class="d-flex mb-4">
+				<div class="w-title pr-2"></div>
+				<div>
+					<i>
+						<t t-esc="position_title_en" />
+						&#8722;
+						<t t-esc="department_name" />
+					</i>
+				</div>
+			</div>
+			<div class="d-flex mb-5">
+				<div class="w-title pr-2">Ref:</div>
+				<div>
+					<t t-esc="year" /> Year End Bonus
+				</div>
+			</div>
+			<div>
+				Thanks to the unwavering commitment and dedication of ILAV members, we have shown that we can overcome any challenge in the past year.
+				<br />
+				<br />
+				In acknowledgement of your contribution throughout this year, where your skills and expertise have been key driving forces in our achievements, we are delighted to inform you that you will receive a recognition allowance as a token of our deep appreciation for your efforts and loyalty to our team:
+				<br />
+				<br />
+				<span class="px-3">●</span><span class="pl-2">Gross year-end bonus:</span>
+				<span class="pl-4 font-weight-bold">
+					<t t-esc="format_float(gross_performance_bonus, 0)" /> &#xA0;VND
+				</span>
+				<br />
+				<br />
+			</div>
+			<div class="mb-5">
+				Thank you for your hard work and your firm dedication to ILAV. We look forward to continuing to work with you towards even greater successes in the future.
+			</div>
+			<div class="mb-5">
+				Yours sincerely,
+			</div>
+			<div class="py-5">
+				<div class="font-weight-bold">
+					<t t-esc="signature" />
+				</div>
+				<t t-esc="signer_title_en" />
+			</div>
+		</section>
+	</t>
+</templates>

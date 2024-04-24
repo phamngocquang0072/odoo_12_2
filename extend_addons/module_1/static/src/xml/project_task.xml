@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+   <t t-name="CustomDashBoard">
+       <div class="oh_dashboards" style="margin-top: 20px;">
+           <div class="container-fluid o_pj_dashboard">
+           </div>
+       </div>
+   </t>
+    <t t-name="DashboardProject">
+        
+       <div class="row main-section bg-light">
+           <div class="shadow rounded m-3  bg-white p-3 col-4">
+               <div class="oh-card row" >
+                   <div class="col-4">
+                   </div>
+                   <div class="col-8">
+                       <div class="stat_name mb-1"><t t-esc="widget.name"/></div>
+                       <div class="stat_code"><t t-esc="widget.code"/></div>
+                       <div class="stat_phone"><i class="fa fa-phone"/> <t t-esc="widget.work_phone"/></div>
+                       <div class="stat_email"><i class="fa fa-envelope-o"/> <t t-esc="widget.work_email"/></div>
+                   </div>
+               </div>
+           </div>
+           <div class="shadow rounded m-3  bg-white p-3 col text-center" >
+               <div class="oh-card" >
+                   <div class="oh-card-body">
+                       <div class="stat-widget-one">
+                           <div class="stat-icon"><i class="fa fa-qrcode"/></div>
+                           <div class="stat-content">
+                               <div class="stat-head">My Tasks</div>
+                               <div class="stat_count"><t t-esc="widget.my_tasks"/></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="shadow rounded m-3  bg-white p-3 col text-center" >
+               <div class="oh-card" >
+                   <div class="oh-card-body">
+                       <div class="stat-widget-one">
+                           <div class="stat-icon"><i class="fa fa-sun-o"/></div>
+                           <div class="stat-content">
+                               <div class="stat-head">Uncompleted Tasks</div>
+                               <div class="stat_count"><t t-esc="widget.undone_tasks"/></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="shadow rounded m-3  bg-white p-3 col text-center" >
+               <div class="oh-card" >
+                   <div class="oh-card-body">
+                       <div class="stat-widget-one">
+                           <div class="stat-icon"><i class="fa fa-calendar"/></div>
+                           <div class="stat-content">
+                               <div class="stat-head">In Progress Tasks</div>
+                               <div class="stat_count"><t t-esc="widget.in_progress_tasks"/></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="shadow rounded m-3  bg-white p-3 col text-center" >
+               <div class="oh-card" >
+                   <div class="oh-card-body">
+                       <div class="stat-widget-one">
+                           <div class="stat-icon"><i class="fa fa-compass"/></div>
+                           <div class="stat-content">
+                               <div class="stat-head">Completed Tasks</div>
+                               <div class="stat_count"><t t-esc="widget.done_tasks"/></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </t>
+</templates>
