@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <menuitem action="open_view_project_all" id="menu_projects" name="Projects" parent="menu_main_pm" sequence="1"/>
-
-    <record id="project.open_view_project_all" model="ir.ui.menu">
+    <record id="course_menu" model="ir.ui.menu">
+        <field name="name">Courses</field>
         <field name="sequence" eval="2" />
-    </record>
-    <record id="project.open_view_project_all" model="ir.ui.menu">
-        <field name="name">My Task</field>
-        <field name="sequence" eval="2" />
-        <field name="action" ref="action_hr_pp_bonus_client" />
-        <field name="parent_id" ref="project.menu_main_pm" />
+        <field name="action" ref="action_course_create" />
+        <field name="parent_id" ref="contacts.menu_contacts" />
     </record>
 </odoo>

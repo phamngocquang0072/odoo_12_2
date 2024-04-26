@@ -12,6 +12,7 @@
            <div class="shadow rounded m-3  bg-white p-3 col-4">
                <div class="oh-card row" >
                    <div class="col-4">
+                       <img class="o_mail_preview_image" t-att-src="widget.imageSRC" alt="Image"/>
                    </div>
                    <div class="col-8">
                        <div class="stat_name mb-1"><t t-esc="widget.name"/></div>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+  <record id="view_course_form" model="ir.ui.view">
+    <field name="name">courses.course.form</field>
+    <field name="model">courses.course</field>
+    <field name="arch" type="xml">
+      <form string="Course">
+        <group>
+          <field name="name" required="True"/>
+          <field name="description" attrs="{'widget': 'richtext'}"/>
+          <field name="teacher_id" required="True"/>
+          <field name="date_start" required="True"/>
+          <field name="date_end" required="True"/>
+          <field name="level" required="True"/>
+          <field name="thumbnail" widget="image"/>
+        </group>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_course_tree" model="ir.ui.view">
+    <field name="name">courses.course.tree</field>
+    <field name="model">courses.course</field>
+    <field name="arch" type="xml">
+      <tree string="Courses">
+        <field name="name"/>
+        <field name="teacher_id" />
+        <field name="date_start" />
+        <field name="date_end" />
+        <field name="level" />
+      </tree>
+    </field>
+  </record>
+
+    <record id="action_course_create" model="ir.actions.act_window">
+    <field name="name">Create Course</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">courses.course</field>
+    <field name="view_mode">tree,form</field>
+    <field name="target">current</field>
+    <field name="context">{}</field>
+  </record>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+   <data>
+       <template id="snippets" name="Custom Snippets">
+           <section class="s_references bg-gray-lighter">
+               <div class="container">
+                   <h3>
+                       <center>
+                           <b>Menu !!</b>
+                       </center>
+                   </h3>
+                   <div class="row">
+                          <div class="alert alert-success">
+                             <img src="/module_2/static/src/img/snippets/food_2.png"
+                                  class="img img-responsive" alt="Demo Logo 2"/>
+                        </div>
+                   </div>
+                   <div class="row">
+                      <div class="alert alert-danger">
+                             <img   src="/module_2/static/src/img/snippets/food.png"
+                             class="img img-responsive" alt="Demo"/>
+                       </div>
+                   </div>
+               </div>
+           </section>
+       </template>
+   </data>
+</odoo>

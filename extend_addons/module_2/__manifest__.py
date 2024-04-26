@@ -2,23 +2,21 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Test 1',
+    'name': 'Task 2',
     'version': '0.1',
     'author': 'Quang',
     'website': '',
     'category': 'Test',
-    'summary': 'Test 1',
+    'summary': 'Task 2',
     'description': """""",
     'depends': [
-        'project',
-        'board'
+        'website',
     ],
     'data': [
-        'security/ir.model.access.csv',
-        'security/security.xml',
 
-        'views/project_task_view.xml',
-        'menu/menu.xml',
+        'views/snippets.xml',
+        'views/template.xml',
+        # 'menu/menu.xml',
     ],
     'installable': True,
     'application': False,

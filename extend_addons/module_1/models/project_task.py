@@ -26,7 +26,7 @@ class ProjectTask(models.Model):
             'employee': employee,
             'work_phone': employee.work_phone if employee else '',
             'code': employee.barcode if employee else '',
-            'emp_id': employee.id if employee else '',
+            'imageSRC': '/web/image/res.users/{}/image_medium'.format(employee.id),
             'work_email': employee.work_email if employee else '',
             'my_tasks': len(my_tasks),
             'in_progress_tasks': len(in_progress_tasks),

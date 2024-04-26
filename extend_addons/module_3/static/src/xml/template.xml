@@ -1,33 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<templates xml:space="preserve">
-
-    <!-- LAYOUT TEMPLATES -->
-    <t t-name="ila_hr_payroll_pp_bonus.PP_Bonus_Template">
-        <div class="h-100 overflow-auto">
-            <div class="w-50 text-center mx-auto my-4 payslip-form p-4 border rounded animate__animated animate__fadeInDown">
-                <h1>Performance Bonuses</h1>
-                <div class="box-payslip d-flex align-self-center justify-content-center">
-                    <div class="w-75 d-flex">
-                        <select id="ila_year" class="o_input o_field_widget o_required_modifier oe_inline ila-field-year">
-                            <option value="2024">2024</option>
-                            <option value="2023" selected="selected">2023</option>
-                            <option value="2022">2022</option>
-                            <option value="2021">2021</option>
-                        </select>
-                    </div>
-                    <button name="view_report" type="object" class="btn btn-primary btn-view-content oe_highlight mx-3">
-                        <i class="fa fa-eye pr-1" aria-hidden="true"></i>
-                        <span>View</span>
-                    </button>
-                    <button name="print_report" type="object" class="btn btn-primary btn-print-content oe_highlight" disabled="disabled">
-                        <i class="fa fa-print pr-1" aria-hidden="true"></i>
-                        <span>Download as PDF</span>
-                    </button>
-                </div>
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="module_3.CourseButton">
+        <a class="o_course_btn" data-display="static" role="button">
+            <i class="fa fa-book" role="img" aria-label="Courses"/>
+        </a>
+    </t>
+    <t t-inherit="web.ControlPanel" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_cp_right')]" position="replace">
+            <div class="o_cp_right">
+                <div class="btn-group o_search_options" role="search"/>
+                <nav class="o_cp_pager" role="search" aria-label="Pager"/>
+                <t t-call="module_3.CourseButton"/>
+                <nav class="btn-group o_cp_switch_buttons" role="toolbar" aria-label="View switcher"/>
             </div>
-
-            <div class="ila-container-view p-4 mx-auto"></div>
-        </div>
+        </xpath>
     </t>
 
 </templates>
