@@ -19,7 +19,7 @@ class ProjectTask(models.Model):
         ]
         my_tasks = self.search(domain)
         undone_tasks = my_tasks.filtered(lambda t: t.date_deadline >= today and t.stage_id != stage_in_done)
-        in_progress_tasks = my_tasks.filtered(lambda t: t.date_deadline < today and t.stage_id == stage_in_progress)
+        in_progress_tasks = my_tasks.filtered(lambda t: t.date_deadline > today and t.stage_id == stage_in_progress)
         done_tasks = my_tasks.filtered(lambda t: t.stage_id == stage_in_done)
         result = {
             'name': employee.name if employee else '',
