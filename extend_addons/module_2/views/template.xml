@@ -5,7 +5,7 @@
  <xpath expr="//div[@id='snippet_structure']"   position="inside">
      <div class="o_panel_body">
            <t t-snippet="module_2.snippets"
-                    t-thumbnail="/module_2/static/src/img/snippets/food.png" />
+              t-thumbnail="/module_2/static/src/img/snippets/food.png" />
            </div>
         </xpath>
      </template>

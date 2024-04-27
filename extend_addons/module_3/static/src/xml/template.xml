@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates>
     <t t-name="module_3.CourseButton">
-        <a class="o_course_btn" data-display="static" role="button">
+        <a class="o_course_btn" role="button">
             <i class="fa fa-book" role="img" aria-label="Courses"/>
         </a>
     </t>
-    <t t-inherit="web.ControlPanel" t-inherit-mode="extension">
-        <xpath expr="//div[hasclass('o_cp_right')]" position="replace">
-            <div class="o_cp_right">
-                <div class="btn-group o_search_options" role="search"/>
-                <nav class="o_cp_pager" role="search" aria-label="Pager"/>
-                <t t-call="module_3.CourseButton"/>
-                <nav class="btn-group o_cp_switch_buttons" role="toolbar" aria-label="View switcher"/>
-            </div>
-        </xpath>
+    <t t-extend="web.ControlPanel">
+        <t t-jquery=".o_cp_right" t-operation="inside">
+            <t t-call="module_3.CourseButton"/>
+        </t>
     </t>
 
 </templates>

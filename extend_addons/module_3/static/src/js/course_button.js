@@ -11,7 +11,7 @@ odoo.define('module_3.CourseButton', function(require) {
         name: 'course_button',
         template:'module_3.CourseButton',
         events: {
-            'click .o_course_btn': '_onClickPreview',
+            'click .o_course_btn': '_onClick',
         },
         /**
          * @override
@@ -25,7 +25,7 @@ odoo.define('module_3.CourseButton', function(require) {
         start: function () {
             return this._super.apply(this, arguments);
         },
-        _onClickPreview: function (ev) {
+        _onClick: function (ev) {
             this._rpc({
               model: 'courses.course',
               method: 'open_course'
